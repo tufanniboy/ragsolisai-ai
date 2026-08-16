@@ -1,0 +1,239 @@
+body[data-page="mlops-consulting"]{
+  --ops-black:#0d1011;
+  --ops-paper:#e7e4da;
+  --ops-yellow:#f2c23d;
+  --ops-blue:#3154e8;
+  --ops-red:#e95e43;
+  --ops-ink:#1a1d1f;
+  background:var(--ops-black);
+  color:#f7f5ed;
+}
+
+body[data-page="mlops-consulting"] .hero{
+  min-height:100svh;
+  background:var(--ops-black);
+  color:#fff;
+  overflow:hidden;
+}
+
+body[data-page="mlops-consulting"] .hero::before{
+  content:"RUN  /  VERIFY  /  RELEASE  /  OBSERVE";
+  position:absolute;
+  z-index:3;
+  right:max(7vw,2rem);
+  top:14vh;
+  left:auto;
+  color:var(--ops-yellow);
+  font:600 .66rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;
+  letter-spacing:.15em;
+}
+
+body[data-page="mlops-consulting"] .hero::after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,var(--ops-black) 0,rgba(13,16,17,.88) 25%,rgba(13,16,17,.32) 52%,rgba(13,16,17,.04) 82%),linear-gradient(0deg,rgba(13,16,17,.58),transparent 48%);
+}
+
+body[data-page="mlops-consulting"] .hero-photo{inset:0;width:100%;height:100%}
+body[data-page="mlops-consulting"] .hero-photo img{object-position:center 48%;filter:saturate(.78) contrast(1.06) brightness(.9);transform:scale(1.08) translateX(5%)}
+
+body[data-page="mlops-consulting"] .hero-copy{
+  position:relative;
+  z-index:4;
+  width:min(58%,790px);
+  align-self:end;
+  padding:clamp(9rem,18vh,13rem) 3vw clamp(8rem,13vh,10rem) max(7vw,2rem);
+}
+
+body[data-page="mlops-consulting"] .hero-copy .eyebrow{color:var(--ops-yellow)}
+body[data-page="mlops-consulting"] .hero-copy h1{max-width:12ch;font-size:clamp(2.8rem,4.7vw,5.4rem);line-height:.94;letter-spacing:-.06em}
+body[data-page="mlops-consulting"] .hero-copy h1 em{display:block;color:var(--ops-yellow);font-style:normal;font-weight:inherit}
+body[data-page="mlops-consulting"] .hero-copy .lede{max-width:37rem;color:rgba(255,255,255,.7)}
+body[data-page="mlops-consulting"] .hero .button{background:var(--ops-yellow);color:var(--ops-black)}
+body[data-page="mlops-consulting"] .hero .text-link{color:#fff;border-color:rgba(255,255,255,.45)}
+body[data-page="mlops-consulting"] .hero-index{z-index:4;color:rgba(255,255,255,.6)}
+
+.ops-hero-ticket{
+  position:absolute;
+  z-index:4;
+  right:max(7vw,2rem);
+  top:38%;
+  width:clamp(14rem,18vw,19rem);
+  padding:1.25rem;
+  border:1px solid rgba(242,194,61,.72);
+  background:rgba(13,16,17,.68);
+  backdrop-filter:blur(7px);
+  box-shadow:1rem 1rem 0 rgba(242,194,61,.12);
+  color:#fff;
+}
+.ops-hero-ticket>span{display:block;margin-bottom:2.5rem;color:var(--ops-yellow);font:600 .68rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.14em}
+.ops-hero-ticket strong{display:block;margin-bottom:1.4rem;font-size:clamp(1.35rem,1.8vw,1.8rem);line-height:1.05;letter-spacing:-.035em;font-weight:400}
+.ops-hero-ticket ul{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.25)}
+.ops-hero-ticket li{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid rgba(255,255,255,.18);font:500 .63rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em;text-transform:uppercase}
+.ops-hero-ticket li::after{content:"●";color:var(--ops-yellow)}
+
+.ops-thesis{
+  min-height:62svh;
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem);
+  display:grid;
+  grid-template-columns:minmax(11rem,.8fr) minmax(0,3fr);
+  gap:6vw;
+  background:var(--ops-blue);
+  color:#fff;
+}
+
+.ops-kicker,.ops-runbook__head span,.ops-field__copy>span,.ops-proof__head span{
+  font:600 .7rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+}
+
+.ops-thesis h2{
+  margin:0;
+  max-width:18ch;
+  font-size:clamp(2.35rem,4.5vw,5.1rem);
+  line-height:.97;
+  letter-spacing:-.055em;
+  font-weight:400;
+}
+.ops-thesis h2 em{font-style:normal;color:var(--ops-yellow)}
+
+.ops-runbook{
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem);
+  background:var(--ops-paper);
+  color:var(--ops-ink);
+}
+
+.ops-runbook__head{
+  display:grid;
+  grid-template-columns:1fr 2.2fr;
+  gap:4rem;
+  align-items:end;
+  margin-bottom:4rem;
+}
+.ops-runbook__head span{color:#5c6465}
+.ops-runbook__head h2{margin:0;max-width:16ch;font-size:clamp(2.3rem,4vw,4.6rem);line-height:.98;letter-spacing:-.052em;font-weight:400}
+
+.ops-runbook__body{position:relative;padding-left:clamp(2rem,6vw,6rem)}
+.ops-runbook__body::before{content:"";position:absolute;left:0;top:0;bottom:0;width:clamp(1rem,2.2vw,2rem);background:repeating-linear-gradient(180deg,var(--ops-black) 0 2.4rem,var(--ops-yellow) 2.4rem 4.8rem)}
+
+.ops-entry{
+  min-height:12rem;
+  display:grid;
+  grid-template-columns:6rem minmax(12rem,1fr) minmax(17rem,1.35fr) 12rem;
+  gap:2rem;
+  align-items:center;
+  padding:2.5rem 2rem;
+  border-top:1px solid rgba(26,29,31,.28);
+  background:rgba(255,255,255,.08);
+  transition:transform .3s ease,background-color .3s ease,color .3s ease;
+}
+.ops-entry:last-child{border-bottom:1px solid rgba(26,29,31,.28)}
+.ops-entry:hover{transform:translateX(1rem);background:var(--ops-black);color:#fff}
+.ops-entry__num{font:500 1.1rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--ops-red)}
+.ops-entry h3{margin:0;font-size:clamp(1.7rem,2.5vw,2.9rem);line-height:1;letter-spacing:-.045em;font-weight:400}
+.ops-entry p{margin:0;max-width:34rem;color:inherit;opacity:.67;font-size:clamp(.98rem,1.2vw,1.12rem);line-height:1.55}
+.ops-entry b{justify-self:end;padding:.65rem .8rem;border:1px solid currentColor;font:600 .65rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+
+.ops-field{
+  min-height:82svh;
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(22rem,.8fr);
+  background:var(--ops-black);
+  color:#fff;
+}
+
+.ops-field__photo{position:relative;margin:0;min-height:44rem;overflow:hidden}
+.ops-field__photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(.65) contrast(1.08)}
+.ops-field__photo::after{content:"LIVE INFRASTRUCTURE / FIELD 03";position:absolute;left:2rem;bottom:2rem;padding:.65rem .8rem;background:var(--ops-yellow);color:var(--ops-black);font:600 .65rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em}
+
+.ops-field__copy{padding:clamp(4rem,7vw,7rem) clamp(2rem,5vw,6rem);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.ops-field__copy>span{color:var(--ops-yellow)}
+.ops-field__copy h2{margin:2rem 0 1.5rem;max-width:11ch;font-size:clamp(2.4rem,3.9vw,4.5rem);line-height:.97;letter-spacing:-.055em;font-weight:400}
+.ops-field__copy p{max-width:31rem;color:rgba(255,255,255,.65);font-size:1.08rem;line-height:1.65}
+.ops-field__drive{width:min(122%,620px);margin:2rem -12% -7rem auto;transform:rotate(7deg);filter:drop-shadow(0 2rem 2.5rem rgba(0,0,0,.55));transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.ops-field:hover .ops-field__drive{transform:rotate(-3deg) translateY(-1rem)}
+
+.ops-proof{
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem);
+  background:#fff;
+  color:var(--ops-ink);
+}
+.ops-proof__head{display:flex;justify-content:space-between;align-items:end;gap:3rem;margin-bottom:4rem}
+.ops-proof__head span{color:#62696b}
+.ops-proof__head h2{margin:0;max-width:15ch;font-size:clamp(2.3rem,3.9vw,4.5rem);line-height:.98;letter-spacing:-.052em;font-weight:400}
+.ops-proof__rail{display:grid;grid-template-columns:repeat(4,1fr);position:relative;border-block:1px solid var(--ops-ink)}
+.ops-proof__rail::before{content:"";position:absolute;left:4%;right:4%;top:4rem;height:2px;background:var(--ops-ink)}
+.ops-node{min-height:18rem;padding:2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--ops-ink);position:relative}
+.ops-node:last-child{border-right:0}
+.ops-node::before{content:"";position:absolute;top:3.6rem;left:1.4rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--ops-yellow);border:2px solid var(--ops-ink);z-index:1;transition:transform .25s ease,background .25s ease}
+.ops-node:hover::before{transform:scale(1.6);background:var(--ops-red)}
+.ops-node span{font:600 .68rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em}
+.ops-node h3{margin:0;max-width:8ch;font-size:clamp(1.65rem,2.5vw,2.8rem);line-height:1;letter-spacing:-.045em;font-weight:400}
+
+.ops-close{
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem) clamp(9rem,14vw,13rem);
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:3rem;
+  background:var(--ops-yellow);
+  color:var(--ops-ink);
+}
+.ops-close h2{margin:1.5rem 0 0;max-width:16ch;font-size:clamp(2.4rem,4.1vw,4.8rem);line-height:.98;letter-spacing:-.055em;font-weight:400}
+.ops-close .button{flex:none;background:var(--ops-black);color:#fff}
+
+@media (max-width:1000px){
+  .ops-hero-ticket{right:3vw;width:14rem}
+  .ops-entry{grid-template-columns:4rem minmax(10rem,1fr) minmax(14rem,1.2fr) 9rem;gap:1.25rem;padding-inline:1.25rem}
+}
+
+@media (max-width:850px){
+  .ops-thesis,.ops-runbook__head{grid-template-columns:1fr;gap:2.5rem}
+  .ops-entry{grid-template-columns:3rem 1fr;padding-block:2.2rem}
+  .ops-entry p{grid-column:2}
+  .ops-entry b{grid-column:2;justify-self:start}
+  .ops-field{grid-template-columns:1fr}
+  .ops-field__photo{min-height:68svh}
+  .ops-field__copy{min-height:38rem}
+  .ops-proof__rail{grid-template-columns:repeat(2,1fr)}
+  .ops-node:nth-child(2){border-right:0}
+  .ops-node:nth-child(-n+2){border-bottom:1px solid var(--ops-ink)}
+  .ops-proof__rail::before{display:none}
+  .ops-node::before{top:1.75rem;right:1.4rem;left:auto}
+}
+
+@media (max-width:720px){
+  body[data-page="mlops-consulting"] .hero::before{top:7rem;right:1.25rem}
+  body[data-page="mlops-consulting"] .hero::after{background:linear-gradient(180deg,rgba(13,16,17,.04) 22%,rgba(13,16,17,.9) 68%,var(--ops-black) 100%)}
+  body[data-page="mlops-consulting"] .hero-photo img{object-position:56% center;transform:scale(1.04)}
+  body[data-page="mlops-consulting"] .hero-copy{position:absolute;inset:auto 0 0;width:100%;padding:9rem 1.25rem 8.5rem}
+  body[data-page="mlops-consulting"] .hero-copy h1{font-size:clamp(2.5rem,10.5vw,3.9rem);max-width:12ch}
+  body[data-page="mlops-consulting"] .hero-copy .lede{font-size:.96rem;line-height:1.55}
+  .ops-thesis{min-height:0}
+  .ops-hero-ticket{display:none}
+  .ops-close{align-items:flex-start;flex-direction:column}
+}
+
+@media (max-width:520px){
+  .ops-thesis,.ops-runbook,.ops-proof,.ops-close{padding-inline:1.25rem}
+  .ops-thesis h2{font-size:clamp(2.25rem,10.5vw,3.5rem)}
+  .ops-runbook__body{padding-left:1.4rem}
+  .ops-runbook__body::before{width:.7rem}
+  .ops-entry{grid-template-columns:2.5rem 1fr;padding-inline:.8rem}
+  .ops-entry:hover{transform:translateX(.25rem)}
+  .ops-field__photo{min-height:58svh}
+  .ops-field__copy{padding:4rem 1.25rem;min-height:34rem}
+  .ops-field__drive{width:110%;margin-right:-15%;margin-bottom:-4rem}
+  .ops-proof__head{align-items:flex-start;flex-direction:column;margin-bottom:2.5rem}
+  .ops-node{min-height:12rem;padding:1rem}
+  .ops-node::before{top:1rem;right:1rem}
+  .ops-node h3{font-size:1.5rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .ops-entry,.ops-field__drive,.ops-node::before{transition:none}
+}

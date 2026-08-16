@@ -1,0 +1,458 @@
+body[data-page="custom-ai-solution"] {
+  --custom-ink: #11110f;
+  --custom-paper: #f1ede2;
+  --custom-orange: #ff7900;
+  --custom-rule: rgba(17, 17, 15, 0.22);
+  background: var(--custom-ink);
+}
+
+body[data-page="custom-ai-solution"] .hero {
+  height: 100svh;
+  min-height: 650px;
+  background: #0b0b0a;
+}
+
+body[data-page="custom-ai-solution"] .hero-photo {
+  left: 46%;
+  width: 54%;
+}
+
+body[data-page="custom-ai-solution"] .hero-photo::after {
+  background: linear-gradient(90deg, #0b0b0a 0%, rgba(11, 11, 10, .93) 12%, rgba(11, 11, 10, .18) 58%, rgba(11, 11, 10, .44) 100%);
+}
+
+body[data-page="custom-ai-solution"] .hero-photo img {
+  filter: saturate(.75) contrast(1.08) brightness(.72);
+}
+
+body[data-page="custom-ai-solution"] .hero-copy {
+  width: min(720px, 52vw);
+  padding-bottom: clamp(7rem, 14vh, 10.5rem);
+}
+
+body[data-page="custom-ai-solution"] .hero-copy h1 {
+  max-width: 11ch;
+  font-size: clamp(3.25rem, 5.65vw, 6.7rem);
+  line-height: .91;
+  letter-spacing: -.068em;
+}
+
+body[data-page="custom-ai-solution"] .hero-copy h1 em {
+  color: var(--custom-orange);
+}
+
+body[data-page="custom-ai-solution"] .hero-copy .lede {
+  max-width: 580px;
+}
+
+body[data-page="custom-ai-solution"] .hero-signature {
+  display: none;
+}
+
+.custom-brief {
+  display: grid;
+  grid-template-columns: minmax(220px, .48fr) minmax(0, 1.52fr);
+  min-height: 70vh;
+  color: var(--custom-ink);
+  background: var(--custom-orange);
+  border-top: 1px solid rgba(0, 0, 0, .4);
+}
+
+.custom-brief__margin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(3rem, 6vw, 6rem);
+  border-right: 1px solid rgba(0, 0, 0, .35);
+}
+
+.custom-brief__margin span,
+.custom-brief__margin small {
+  font-size: .75rem;
+  line-height: 1.25;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.custom-brief__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: clamp(3rem, 7vw, 7.5rem);
+}
+
+.custom-brief__main h2 {
+  max-width: 19ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  line-height: .98;
+  font-weight: 400;
+  letter-spacing: -.055em;
+}
+
+.custom-brief__note {
+  max-width: 540px;
+  margin: 0 0 0 auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, .45);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.custom-blueprint {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 10rem) clamp(1.4rem, 6vw, 7rem);
+  color: var(--custom-ink);
+  background-color: var(--custom-paper);
+  background-image:
+    linear-gradient(rgba(17, 17, 15, .065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 15, .065) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.custom-blueprint::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: clamp(1.4rem, 6vw, 7rem);
+  width: 1px;
+  background: var(--custom-orange);
+}
+
+.custom-blueprint__head {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 3rem;
+  margin-bottom: clamp(4rem, 7vw, 7rem);
+  padding-left: clamp(1.5rem, 3vw, 3rem);
+}
+
+.custom-blueprint__head .section-label {
+  color: var(--custom-ink);
+}
+
+.custom-blueprint__head h2 {
+  max-width: 13ch;
+  margin: 0;
+  font-size: clamp(2.6rem, 5.4vw, 6.25rem);
+  line-height: .94;
+  font-weight: 400;
+  letter-spacing: -.06em;
+}
+
+.custom-blueprint__layout {
+  display: grid;
+  grid-template-columns: minmax(190px, .36fr) minmax(0, 1.64fr);
+  gap: clamp(2.5rem, 6vw, 7rem);
+  padding-left: clamp(1.5rem, 3vw, 3rem);
+}
+
+.custom-blueprint__rail {
+  align-self: start;
+  position: sticky;
+  top: 8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--custom-ink);
+}
+
+.custom-blueprint__rail strong {
+  display: block;
+  margin-bottom: 1.4rem;
+  font: 400 clamp(1.6rem, 2.6vw, 2.75rem)/1 sans-serif;
+  letter-spacing: -.05em;
+}
+
+.custom-blueprint__rail p {
+  max-width: 22ch;
+  margin: 0;
+  color: rgba(17, 17, 15, .68);
+  line-height: 1.55;
+}
+
+.custom-blueprint__sheets {
+  display: grid;
+  gap: 2.2rem;
+}
+
+.custom-sheet {
+  position: relative;
+  display: grid;
+  grid-template-columns: 68px minmax(180px, .74fr) minmax(145px, .58fr) minmax(220px, 1fr);
+  gap: clamp(1.4rem, 3vw, 3.5rem);
+  align-items: center;
+  min-height: 245px;
+  padding: clamp(2rem, 4vw, 4.25rem);
+  border: 1px solid var(--custom-ink);
+  background: rgba(247, 244, 236, .97);
+  box-shadow: 14px 14px 0 rgba(17, 17, 15, .08);
+  transform: translateX(-1.2rem) rotate(-.35deg);
+}
+
+.custom-sheet:nth-child(even) {
+  transform: translateX(1.2rem) rotate(.35deg);
+  background: #e5ded0;
+}
+
+.custom-sheet::after {
+  content: "+";
+  position: absolute;
+  right: 12px;
+  bottom: 7px;
+  color: var(--custom-orange);
+  font-size: 1.3rem;
+}
+
+.custom-sheet__number {
+  align-self: start;
+  color: var(--custom-orange);
+  font: 500 .78rem/1 monospace;
+}
+
+.custom-sheet h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 3.5rem);
+  line-height: .98;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.custom-sheet__capability {
+  margin: 0;
+  font-size: .72rem;
+  line-height: 1.4;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.custom-sheet__copy {
+  margin: 0;
+  color: rgba(17, 17, 15, .7);
+  font-size: clamp(.95rem, 1.15vw, 1.1rem);
+  line-height: 1.55;
+}
+
+.custom-workshop {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 88vh;
+  padding: clamp(3rem, 7vw, 7rem);
+  overflow: hidden;
+  background: #dad7cf;
+}
+
+.custom-workshop__photo,
+.custom-workshop__photo::after {
+  position: absolute;
+  inset: 0;
+}
+
+.custom-workshop__photo {
+  margin: 0;
+}
+
+.custom-workshop__photo::after {
+  content: "";
+  background: linear-gradient(180deg, rgba(8, 8, 7, .08), rgba(8, 8, 7, .18) 43%, rgba(8, 8, 7, .9));
+}
+
+.custom-workshop__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.65) contrast(1.05);
+}
+
+.custom-workshop__copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: .45fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  width: 100%;
+  color: #f5f1e8;
+}
+
+.custom-workshop__copy h2 {
+  max-width: 13ch;
+  margin: 0;
+  font-size: clamp(2.75rem, 5.4vw, 6.5rem);
+  line-height: .92;
+  font-weight: 400;
+  letter-spacing: -.06em;
+}
+
+.custom-workshop__copy p {
+  max-width: 480px;
+  margin: 0 0 .5rem auto;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.custom-close {
+  display: grid;
+  grid-template-columns: .55fr 1.45fr;
+  min-height: 62vh;
+  color: #f6f2e8;
+  background: var(--custom-ink);
+}
+
+.custom-close__label {
+  padding: clamp(3rem, 6vw, 6rem);
+  border-right: 1px solid rgba(255, 255, 255, .16);
+}
+
+.custom-close__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: clamp(3rem, 7vw, 7rem);
+}
+
+.custom-close h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.75rem, 5vw, 6rem);
+  line-height: .96;
+  font-weight: 400;
+  letter-spacing: -.055em;
+}
+
+.dock-icon--letter {
+  font: 600 1rem/1 Arial, sans-serif;
+}
+
+@media (max-width: 900px) {
+  body[data-page="custom-ai-solution"] .hero {
+    min-height: 720px;
+  }
+
+  body[data-page="custom-ai-solution"] .hero-photo {
+    left: 25%;
+    width: 75%;
+    opacity: .65;
+  }
+
+  body[data-page="custom-ai-solution"] .hero-copy {
+    width: min(720px, calc(100% - 3rem));
+  }
+
+  .custom-blueprint__layout,
+  .custom-blueprint__head,
+  .custom-workshop__copy {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-blueprint__rail {
+    position: static;
+  }
+
+  .custom-sheet {
+    grid-template-columns: 48px 1fr;
+    transform: none;
+  }
+
+  .custom-sheet:nth-child(even) {
+    transform: none;
+  }
+
+  .custom-sheet__capability,
+  .custom-sheet__copy {
+    grid-column: 2;
+  }
+
+  .custom-workshop__copy p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-page="custom-ai-solution"] .hero {
+    height: 100svh;
+    min-height: 660px;
+  }
+
+  body[data-page="custom-ai-solution"] .hero-photo {
+    left: 0;
+    width: 100%;
+  }
+
+  body[data-page="custom-ai-solution"] .hero-photo::after {
+    background: linear-gradient(180deg, rgba(11, 11, 10, .2), rgba(11, 11, 10, .88) 55%, #0b0b0a 100%);
+  }
+
+  body[data-page="custom-ai-solution"] .hero-copy {
+    width: calc(100% - 2.5rem);
+    padding-bottom: 7.5rem;
+  }
+
+  body[data-page="custom-ai-solution"] .hero-copy h1 {
+    font-size: clamp(2.65rem, 13vw, 4.3rem);
+  }
+
+  .custom-brief,
+  .custom-close {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-brief__margin,
+  .custom-close__label {
+    min-height: auto;
+    padding: 2rem 1.3rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .28);
+  }
+
+  .custom-brief__margin small {
+    display: none;
+  }
+
+  .custom-brief__main,
+  .custom-close__main {
+    padding: 3.5rem 1.3rem;
+  }
+
+  .custom-blueprint {
+    padding: 5rem 1.1rem;
+    background-size: 32px 32px;
+  }
+
+  .custom-blueprint::before {
+    left: 1.1rem;
+  }
+
+  .custom-blueprint__head,
+  .custom-blueprint__layout {
+    padding-left: 1rem;
+  }
+
+  .custom-sheet {
+    grid-template-columns: 32px 1fr;
+    gap: 1rem;
+    min-height: 0;
+    padding: 1.7rem 1.25rem;
+    box-shadow: 7px 7px 0 rgba(17, 17, 15, .08);
+  }
+
+  .custom-workshop {
+    min-height: 76vh;
+    padding: 2rem 1.3rem 7.5rem;
+  }
+
+  .custom-workshop__photo img {
+    object-position: 58% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-sheet,
+  .custom-sheet:nth-child(even) {
+    transform: none;
+  }
+}

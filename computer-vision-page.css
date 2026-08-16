@@ -1,0 +1,239 @@
+body[data-page="computer-vision-consulting"]{
+  --vision-black:#090c0b;
+  --vision-ink:#171c1a;
+  --vision-paper:#e9e7df;
+  --vision-lime:#c8ff3d;
+  --vision-red:#ff553b;
+  --vision-muted:#9ca49f;
+  background:var(--vision-black);
+  color:#f2f2ed;
+}
+
+body[data-page="computer-vision-consulting"] .hero{
+  min-height:100svh;
+  background:var(--vision-black);
+  color:#fff;
+  overflow:hidden;
+}
+
+body[data-page="computer-vision-consulting"] .hero::before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  width:min(54vw,48rem);
+  aspect-ratio:1;
+  right:4vw;
+  top:50%;
+  border:1px solid rgba(200,255,61,.6);
+  border-radius:50%;
+  transform:translateY(-50%);
+  box-shadow:0 0 0 10vw rgba(200,255,61,.018),0 0 0 20vw rgba(200,255,61,.012);
+  pointer-events:none;
+}
+
+body[data-page="computer-vision-consulting"] .hero::after{
+  content:"+  00:17:42  /  FIELD 01";
+  position:absolute;
+  z-index:3;
+  right:4vw;
+  top:12vh;
+  color:var(--vision-lime);
+  font:500 .65rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;
+  letter-spacing:.15em;
+}
+
+body[data-page="computer-vision-consulting"] .hero-photo{
+  inset:0 0 0 47%;
+  width:auto;
+  height:100%;
+  overflow:hidden;
+}
+
+body[data-page="computer-vision-consulting"] .hero-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,var(--vision-black) 0,rgba(9,12,11,.87) 11%,transparent 44%),linear-gradient(0deg,rgba(9,12,11,.68),transparent 45%);
+}
+
+body[data-page="computer-vision-consulting"] .hero-photo img{
+  object-position:center 48%;
+  filter:grayscale(1) contrast(1.15) brightness(.72);
+}
+
+body[data-page="computer-vision-consulting"] .hero-copy{
+  position:relative;
+  z-index:4;
+  width:min(57%,840px);
+  align-self:end;
+  padding:clamp(8rem,16vh,12rem) 3vw clamp(8rem,13vh,10rem) max(7vw,2rem);
+}
+
+body[data-page="computer-vision-consulting"] .hero-copy .eyebrow{color:var(--vision-lime)}
+body[data-page="computer-vision-consulting"] .hero-copy h1{max-width:12ch;font-size:clamp(2.8rem,4.85vw,5.5rem);line-height:.94;letter-spacing:-.058em}
+body[data-page="computer-vision-consulting"] .hero-copy h1 em{display:block;color:var(--vision-lime);font-style:normal;font-weight:inherit}
+body[data-page="computer-vision-consulting"] .hero-copy .lede{max-width:38rem;color:rgba(255,255,255,.68)}
+body[data-page="computer-vision-consulting"] .hero .button{background:var(--vision-lime);color:var(--vision-black)}
+body[data-page="computer-vision-consulting"] .hero .text-link{color:#fff;border-color:rgba(255,255,255,.45)}
+body[data-page="computer-vision-consulting"] .hero-index{z-index:4;color:rgba(255,255,255,.58)}
+
+.vision-thesis{
+  min-height:68svh;
+  padding:clamp(6rem,11vw,11rem) max(7vw,2rem);
+  display:grid;
+  grid-template-columns:minmax(11rem,.8fr) minmax(0,3fr);
+  gap:6vw;
+  background:var(--vision-lime);
+  color:var(--vision-ink);
+}
+
+.vision-kicker,.vision-method__head span,.vision-specimen__copy>span,.vision-fields__head span{
+  font:500 .7rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.vision-thesis h2{
+  margin:0;
+  max-width:18ch;
+  font-size:clamp(2.35rem,4.6vw,5.2rem);
+  line-height:.96;
+  letter-spacing:-.06em;
+  font-weight:400;
+}
+
+.vision-thesis h2 em{font-style:normal;color:var(--vision-red)}
+
+.vision-method{
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem);
+  background:var(--vision-black);
+  color:#fff;
+}
+
+.vision-method__head{
+  display:grid;
+  grid-template-columns:1fr 2.2fr;
+  gap:4rem;
+  align-items:end;
+  padding-bottom:3rem;
+  border-bottom:1px solid rgba(255,255,255,.24);
+}
+
+.vision-method__head span{color:var(--vision-lime)}
+.vision-method__head h2{margin:0;max-width:17ch;font-size:clamp(2.25rem,4vw,4.6rem);line-height:.98;letter-spacing:-.05em;font-weight:400}
+
+.vision-sequence{position:relative;border-inline:1px solid rgba(255,255,255,.18)}
+.vision-sequence::before,.vision-sequence::after{content:"";position:absolute;left:1.2rem;right:1.2rem;height:10px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.38) 0 2.2rem,transparent 2.2rem 4rem)}
+.vision-sequence::before{top:1rem}.vision-sequence::after{bottom:1rem}
+
+.vision-frame{
+  min-height:15rem;
+  padding:3.8rem clamp(1.5rem,4vw,4rem);
+  display:grid;
+  grid-template-columns:7rem minmax(13rem,1fr) minmax(18rem,1.35fr);
+  gap:3rem;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  position:relative;
+  overflow:hidden;
+}
+.vision-frame:last-child{border-bottom:0}
+.vision-frame::after{content:"";position:absolute;inset:1.5rem;transform:scaleX(0);transform-origin:left;background:var(--vision-lime);transition:transform .42s cubic-bezier(.2,.8,.2,1);z-index:0}
+.vision-frame:hover::after{transform:scaleX(1)}
+.vision-frame>*{position:relative;z-index:1}
+.vision-frame:hover{color:var(--vision-black)}
+.vision-frame__num{font:400 clamp(2.2rem,4.2vw,4.8rem)/1 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--vision-lime)}
+.vision-frame:hover .vision-frame__num{color:var(--vision-red)}
+.vision-frame h3{margin:0;font-size:clamp(1.6rem,2.45vw,2.8rem);font-weight:400;line-height:1.05;letter-spacing:-.04em}
+.vision-frame p{margin:0;max-width:34rem;color:inherit;opacity:.66;font-size:clamp(1rem,1.25vw,1.15rem);line-height:1.55}
+
+.vision-specimen{
+  min-height:84svh;
+  display:grid;
+  grid-template-columns:minmax(0,1.28fr) minmax(22rem,.72fr);
+  background:var(--vision-paper);
+  color:var(--vision-ink);
+}
+
+.vision-specimen__image{margin:0;position:relative;min-height:44rem;overflow:hidden}
+.vision-specimen__image>img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.72) contrast(1.12)}
+.vision-specimen__image::before{content:"";position:absolute;z-index:2;left:50%;top:50%;width:34%;aspect-ratio:1;border:2px solid var(--vision-lime);transform:translate(-50%,-50%);box-shadow:0 0 0 999px rgba(9,12,11,.22)}
+.vision-specimen__image::after{content:"SPECIMEN / COMPONENT FIELD / 1:1";position:absolute;z-index:3;left:2rem;bottom:2rem;padding:.65rem .8rem;background:var(--vision-lime);color:var(--vision-black);font:500 .65rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em}
+
+.vision-specimen__copy{padding:clamp(4rem,7vw,7rem) clamp(2rem,5vw,6rem);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.vision-specimen__copy>span{color:#61715f}
+.vision-specimen__copy h2{margin:2rem 0 1.5rem;max-width:12ch;font-size:clamp(2.35rem,3.9vw,4.4rem);line-height:.97;letter-spacing:-.052em;font-weight:400}
+.vision-specimen__copy p{max-width:31rem;color:rgba(23,28,26,.65);font-size:1.08rem;line-height:1.65}
+.vision-specimen__lens{align-self:flex-end;width:min(95%,380px);margin:3rem -1.5rem -1rem auto;image-rendering:auto;filter:drop-shadow(0 2rem 2rem rgba(23,28,26,.3));transform:rotate(-8deg) scale(1.22);transition:transform .45s ease}
+.vision-specimen:hover .vision-specimen__lens{transform:rotate(4deg) scale(1.28)}
+
+.vision-fields{
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem);
+  background:#fff;
+  color:var(--vision-ink);
+}
+.vision-fields__head{display:flex;justify-content:space-between;align-items:end;gap:3rem;margin-bottom:4rem}
+.vision-fields__head span{color:#657064}
+.vision-fields__head h2{margin:0;max-width:17ch;font-size:clamp(2.25rem,3.85vw,4.4rem);line-height:.98;letter-spacing:-.05em;font-weight:400}
+.vision-fields__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--vision-ink);border-bottom:1px solid var(--vision-ink)}
+.vision-field{min-height:19rem;padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--vision-ink);transition:background .25s ease,color .25s ease}
+.vision-field:last-child{border-right:0}
+.vision-field:hover{background:var(--vision-ink);color:#fff}
+.vision-field span{font:500 .68rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.14em}
+.vision-field h3{margin:0;max-width:8ch;font-size:clamp(1.7rem,2.7vw,3.1rem);line-height:1;letter-spacing:-.045em;font-weight:400}
+.vision-field i{width:.7rem;height:.7rem;border-radius:50%;background:var(--vision-red)}
+
+.vision-close{
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem) clamp(9rem,14vw,13rem);
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:3rem;
+  background:var(--vision-lime);
+  color:var(--vision-ink);
+}
+.vision-close h2{margin:1.5rem 0 0;max-width:16ch;font-size:clamp(2.35rem,4.1vw,4.8rem);line-height:.98;letter-spacing:-.052em;font-weight:400}
+.vision-close .button{flex:none;background:var(--vision-ink);color:#fff}
+
+@media (max-width:900px){
+  .vision-thesis,.vision-method__head{grid-template-columns:1fr;gap:2.5rem}
+  .vision-frame{grid-template-columns:5rem 1fr;gap:1.5rem}
+  .vision-frame p{grid-column:2}
+  .vision-specimen{grid-template-columns:1fr}
+  .vision-specimen__image{min-height:72svh}
+  .vision-specimen__copy{min-height:38rem}
+  .vision-fields__grid{grid-template-columns:repeat(2,1fr)}
+  .vision-field:nth-child(2){border-right:0}
+  .vision-field:nth-child(-n+2){border-bottom:1px solid var(--vision-ink)}
+}
+
+@media (max-width:760px){
+  body[data-page="computer-vision-consulting"] .hero::before{width:80vw;right:-24vw;top:36%}
+  body[data-page="computer-vision-consulting"] .hero::after{top:7rem;right:1.25rem}
+  body[data-page="computer-vision-consulting"] .hero-photo{inset:0;width:100%;height:100%}
+  body[data-page="computer-vision-consulting"] .hero-photo::after{background:linear-gradient(180deg,rgba(9,12,11,.05) 20%,rgba(9,12,11,.9) 67%,var(--vision-black) 100%)}
+  body[data-page="computer-vision-consulting"] .hero-copy{position:absolute;inset:auto 0 0;width:100%;padding:9rem 1.25rem 8.5rem}
+  body[data-page="computer-vision-consulting"] .hero-copy h1{font-size:clamp(2.5rem,10.5vw,3.8rem);max-width:12ch}
+  body[data-page="computer-vision-consulting"] .hero-copy .lede{font-size:.96rem;line-height:1.55}
+  .vision-thesis{min-height:0}
+  .vision-close{align-items:flex-start;flex-direction:column}
+}
+
+@media (max-width:520px){
+  .vision-thesis,.vision-method,.vision-fields,.vision-close{padding-inline:1.25rem}
+  .vision-thesis h2{font-size:clamp(2.25rem,10.5vw,3.5rem)}
+  .vision-method__head{padding-bottom:2rem}
+  .vision-frame{grid-template-columns:3.5rem 1fr;padding:3rem 1rem;min-height:13rem}
+  .vision-frame::after{inset:.75rem}
+  .vision-frame__num{font-size:2rem}
+  .vision-specimen__image{min-height:60svh}
+  .vision-specimen__copy{padding:4rem 1.25rem;min-height:34rem}
+  .vision-specimen__lens{width:70%;margin-right:5%;transform:rotate(-8deg) scale(1.35)}
+  .vision-fields__head{align-items:flex-start;flex-direction:column;margin-bottom:2.5rem}
+  .vision-field{min-height:13rem;padding:1rem}
+  .vision-field h3{font-size:1.55rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .vision-frame::after,.vision-specimen__lens{transition:none}
+}

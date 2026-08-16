@@ -1,0 +1,83 @@
+:root {
+  --ag-ink: #071a23;
+  --ag-yellow: #ffd738;
+  --ag-mint: #b9f3d0;
+  --ag-paper: #f0eee8;
+  --ag-blue: #1d51ff;
+}
+
+body[data-page="agentic-ai-consulting"] { background: var(--ag-paper); color: var(--ag-ink); }
+body[data-page="agentic-ai-consulting"] .hero { min-height: 100svh; grid-template-columns: 45% 55%; background: var(--ag-yellow); color: var(--ag-ink); }
+body[data-page="agentic-ai-consulting"] .hero-photo { left: 45%; opacity: 1; filter: none; }
+body[data-page="agentic-ai-consulting"] .hero-photo::after { background: linear-gradient(90deg,var(--ag-yellow) 0%,rgba(255,215,56,.3) 23%,transparent 62%),linear-gradient(0deg,rgba(7,26,35,.25),transparent 45%); }
+body[data-page="agentic-ai-consulting"] .hero-copy { grid-column: 1; align-self: center; max-width: none; padding: 8rem clamp(1.5rem,4.8vw,5.8rem) 7rem clamp(1.5rem,7vw,8rem); }
+body[data-page="agentic-ai-consulting"] .hero-copy h1 { max-width: 720px; font-size: clamp(3rem,4.8vw,5.5rem); line-height: .94; color: var(--ag-ink); }
+body[data-page="agentic-ai-consulting"] .hero-copy h1 em { color: var(--ag-blue); }
+body[data-page="agentic-ai-consulting"] .hero-copy .lede { max-width: 600px; color: rgba(7,26,35,.68); }
+body[data-page="agentic-ai-consulting"] .hero-copy .button { background: var(--ag-ink); border-color: var(--ag-ink); color: white; }
+body[data-page="agentic-ai-consulting"] .hero-copy .button:hover { color: var(--ag-ink); }
+body[data-page="agentic-ai-consulting"] .eyebrow::before { background: var(--ag-blue); }
+body[data-page="agentic-ai-consulting"] .hero-index { color: white; }
+
+.agentic-thesis { display: grid; grid-template-columns: .35fr 1.65fr; gap: 7vw; align-items: start; padding: clamp(5rem,8vw,8rem) clamp(1.25rem,7vw,8rem); background: var(--ag-paper); }
+.agentic-thesis__label { width: min(100%,250px); padding-top: .75rem; border-top: 2px solid var(--ag-blue); font: 750 .69rem/1.4 ui-monospace,monospace; letter-spacing: .16em; text-transform: uppercase; }
+.agentic-thesis h2 { max-width: 1180px; margin: 0; font-size: clamp(2.75rem,5.1vw,5.9rem); line-height: .96; font-weight: 400; letter-spacing: -.064em; }
+.agentic-thesis h2 em { color: var(--ag-blue); font-style: normal; }
+
+.agentic-authority { padding: clamp(5rem,8vw,8rem) clamp(1.25rem,7vw,8rem); background: var(--ag-ink); color: white; }
+.agentic-authority__head { display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; align-items: end; margin-bottom: 3.5rem; }
+.agentic-authority__head h2 { max-width: 880px; margin: 0; font-size: clamp(3rem,5.4vw,6.25rem); line-height: .9; font-weight: 400; letter-spacing: -.07em; }
+.agentic-authority__head p { max-width: 430px; margin: 0 0 .4rem auto; color: rgba(255,255,255,.63); }
+.agentic-row { display: grid; grid-template-columns: 68px .64fr 1fr 180px; gap: 2rem; align-items: center; min-height: 158px; border-top: 1px solid rgba(255,255,255,.2); }
+.agentic-row:last-child { border-bottom: 1px solid rgba(255,255,255,.2); }
+.agentic-row__num { color: var(--ag-yellow); font: 750 .72rem/1 ui-monospace,monospace; }
+.agentic-row h3 { margin: 0; font-size: clamp(1.6rem,2.4vw,2.9rem); font-weight: 430; letter-spacing: -.05em; }
+.agentic-row p { max-width: 440px; margin: 0; color: rgba(255,255,255,.62); }
+.agentic-row__control { display: flex; align-items: center; justify-content: space-between; gap: .7rem; padding: .75rem .85rem; border: 1px solid rgba(185,243,208,.55); border-radius: 999px; color: var(--ag-mint); font: 700 .65rem/1 ui-monospace,monospace; letter-spacing: .08em; text-transform: uppercase; }
+.agentic-row__control::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--ag-mint); box-shadow: 0 0 0 4px rgba(185,243,208,.14); }
+
+.agentic-control { display: grid; grid-template-columns: 1.22fr .78fr; min-height: 80svh; background: var(--ag-yellow); }
+.agentic-control__photo { position: relative; min-height: 650px; margin: 0; overflow: hidden; }
+.agentic-control__photo img { width: 100%; height: 100%; object-fit: cover; }
+.agentic-control__photo figcaption { position: absolute; left: 1.2rem; bottom: 1.2rem; padding: .5rem .72rem; background: var(--ag-yellow); color: var(--ag-ink); font: 750 .62rem/1 ui-monospace,monospace; letter-spacing: .1em; text-transform: uppercase; }
+.agentic-control__copy { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(4.5rem,7vw,7.5rem) clamp(1.5rem,5vw,6rem); }
+.agentic-control__copy h2 { max-width: 650px; margin: auto 0 1.5rem; font-size: clamp(2.8rem,5vw,5.9rem); line-height: .91; font-weight: 400; letter-spacing: -.067em; }
+.agentic-control__copy p { max-width: 510px; color: rgba(7,26,35,.68); }
+.agentic-control__stamp { align-self: flex-start; padding: .65rem .85rem; border: 2px solid var(--ag-blue); color: var(--ag-blue); transform: rotate(-3deg); font: 800 .68rem/1 ui-monospace,monospace; letter-spacing: .12em; text-transform: uppercase; }
+
+.agentic-principles { display: grid; grid-template-columns: repeat(4,1fr); background: var(--ag-mint); color: var(--ag-ink); border-top: 1px solid rgba(7,26,35,.38); border-left: 1px solid rgba(7,26,35,.38); }
+.agentic-principle { min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.8rem; border-right: 1px solid rgba(7,26,35,.38); border-bottom: 1px solid rgba(7,26,35,.38); }
+.agentic-principle span { font: 750 .7rem/1 ui-monospace,monospace; }
+.agentic-principle h3 { margin: 0; font-size: clamp(1.7rem,2.6vw,3.2rem); line-height: .94; font-weight: 430; letter-spacing: -.055em; }
+.agentic-principle::after { content: "SUPERVISED"; align-self: flex-start; padding: .4rem .55rem; background: var(--ag-ink); color: white; font: 700 .58rem/1 ui-monospace,monospace; letter-spacing: .1em; }
+
+.agentic-close { min-height: 54svh; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: end; padding: clamp(5rem,8vw,8rem) clamp(1.25rem,7vw,8rem) 9rem; background: var(--ag-blue); color: white; }
+.agentic-close h2 { max-width: 980px; margin: 1rem 0 0; font-size: clamp(3rem,6vw,7rem); line-height: .9; font-weight: 400; letter-spacing: -.07em; }
+.agentic-close .button { background: var(--ag-yellow); border-color: var(--ag-yellow); color: var(--ag-ink); }
+
+@media (max-width: 900px) {
+  body[data-page="agentic-ai-consulting"] .hero { grid-template-columns: 1fr; }
+  body[data-page="agentic-ai-consulting"] .hero-photo { left: 0; opacity: .42; }
+  body[data-page="agentic-ai-consulting"] .hero-photo::after { background: linear-gradient(0deg,var(--ag-yellow) 8%,rgba(255,215,56,.88) 62%,rgba(255,215,56,.16)); }
+  body[data-page="agentic-ai-consulting"] .hero-copy { grid-column: 1; align-self: end; padding-bottom: 8rem; }
+  .agentic-thesis, .agentic-control { grid-template-columns: 1fr; }
+  .agentic-thesis { gap: 3rem; }
+  .agentic-authority__head { grid-template-columns: 1fr; }
+  .agentic-authority__head p { margin-left: 0; }
+  .agentic-control__photo { min-height: 540px; }
+  .agentic-control__copy { min-height: 560px; }
+  .agentic-principles { grid-template-columns: 1fr 1fr; }
+  .agentic-close { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  body[data-page="agentic-ai-consulting"] .hero-copy h1 { font-size: clamp(2.75rem,12vw,4.1rem); }
+  .agentic-row { grid-template-columns: 38px 1fr; gap: .8rem; padding: 1.5rem 0; }
+  .agentic-row p, .agentic-row__control { grid-column: 2; }
+  .agentic-row__control { width: min(100%,190px); }
+  .agentic-control__photo { min-height: 410px; }
+  .agentic-control__copy { min-height: 480px; }
+  .agentic-principles { grid-template-columns: 1fr; }
+  .agentic-principle { min-height: 220px; }
+  .agentic-close { padding-bottom: 8.5rem; }
+}

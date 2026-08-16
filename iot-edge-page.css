@@ -1,0 +1,138 @@
+body[data-page="iot-ai-solutions"]{
+  --edge-ink:#101311;
+  --edge-paper:#eeeade;
+  --edge-orange:#f1662d;
+  --edge-blue:#304fcb;
+  --edge-lime:#c8d54a;
+  --edge-teal:#208678;
+  background:var(--edge-ink);
+  color:#f5f3eb;
+}
+
+body[data-page="iot-ai-solutions"] .hero{
+  height:100svh;
+  min-height:100svh;
+  max-height:100svh;
+  background:var(--edge-ink);
+  color:#fff;
+  overflow:hidden;
+}
+body[data-page="iot-ai-solutions"] .hero::before{
+  content:"EDGE FIELD / NODE 01";
+  position:absolute;
+  z-index:4;
+  right:max(7vw,2rem);
+  top:clamp(7rem,13vh,9rem);
+  padding:.7rem .9rem;
+  background:var(--edge-orange);
+  color:var(--edge-ink);
+  font:700 .65rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;
+  letter-spacing:.14em;
+}
+body[data-page="iot-ai-solutions"] .hero::after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,var(--edge-ink) 0,rgba(16,19,17,.9) 30%,rgba(16,19,17,.3) 58%,rgba(16,19,17,.05)),linear-gradient(0deg,rgba(16,19,17,.62),transparent 48%);
+}
+body[data-page="iot-ai-solutions"] .hero-photo{inset:0;width:100%;height:100%}
+body[data-page="iot-ai-solutions"] .hero-photo img{object-position:center;filter:saturate(.75) contrast(1.06) brightness(.86)}
+body[data-page="iot-ai-solutions"] .hero-copy{position:relative;z-index:4;width:min(59%,790px);align-self:end;padding:clamp(8.5rem,17vh,12rem) 3vw clamp(7.8rem,12vh,9rem) max(7vw,2rem)}
+body[data-page="iot-ai-solutions"] .hero-copy .eyebrow{color:var(--edge-lime)}
+body[data-page="iot-ai-solutions"] .hero-copy h1{max-width:12ch;font-size:clamp(2.65rem,4.35vw,5rem);line-height:.95;letter-spacing:-.058em}
+body[data-page="iot-ai-solutions"] .hero-copy h1 em{display:block;color:var(--edge-lime);font-style:normal;font-weight:inherit}
+body[data-page="iot-ai-solutions"] .hero-copy .lede{max-width:37rem;color:rgba(255,255,255,.7)}
+body[data-page="iot-ai-solutions"] .hero .button{background:var(--edge-orange);color:var(--edge-ink)}
+body[data-page="iot-ai-solutions"] .hero .text-link{color:#fff;border-color:rgba(255,255,255,.45)}
+body[data-page="iot-ai-solutions"] .hero-index{z-index:4;color:rgba(255,255,255,.58)}
+
+.edge-thesis{min-height:62svh;padding:clamp(6rem,10vw,10rem) max(7vw,2rem);display:grid;grid-template-columns:minmax(11rem,.8fr) minmax(0,3fr);gap:6vw;background:var(--edge-orange);color:var(--edge-ink)}
+.edge-kicker,.edge-manual__head span,.edge-bench__copy>span,.edge-capabilities__head span{font:700 .7rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase;letter-spacing:.15em}
+.edge-thesis h2{margin:0;max-width:18ch;font-size:clamp(2.3rem,4.4vw,5rem);line-height:.98;letter-spacing:-.055em;font-weight:400}
+.edge-thesis h2 em{font-style:normal;color:#fff}
+
+.edge-manual{background:var(--edge-paper);color:var(--edge-ink);padding:clamp(6rem,10vw,10rem) max(7vw,2rem)}
+.edge-manual__head{display:grid;grid-template-columns:1fr 2.2fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.edge-manual__head span{color:#66665f}
+.edge-manual__head h2{margin:0;max-width:16ch;font-size:clamp(2.3rem,3.9vw,4.5rem);line-height:.99;letter-spacing:-.052em;font-weight:400}
+.edge-manual__bands{border-top:1px solid var(--edge-ink)}
+.edge-band{min-height:12rem;display:grid;grid-template-columns:6rem minmax(12rem,.9fr) minmax(17rem,1.3fr) 10rem;gap:2rem;align-items:center;padding:2.5rem 2rem;border-bottom:1px solid var(--edge-ink);background:var(--band);color:var(--band-ink,#fff);transition:transform .3s ease}
+.edge-band:hover{transform:translateX(1rem)}
+.edge-band:nth-child(1){--band:var(--edge-blue)}
+.edge-band:nth-child(2){--band:var(--edge-lime);--band-ink:var(--edge-ink)}
+.edge-band:nth-child(3){--band:var(--edge-teal)}
+.edge-band:nth-child(4){--band:var(--edge-ink)}
+.edge-band__num{font:700 .8rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em}
+.edge-band h3{margin:0;font-size:clamp(1.7rem,2.5vw,2.9rem);line-height:1;letter-spacing:-.045em;font-weight:400}
+.edge-band p{margin:0;max-width:34rem;color:inherit;opacity:.72;font-size:clamp(.98rem,1.2vw,1.12rem);line-height:1.55}
+.edge-band b{justify-self:end;font:700 .62rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase;letter-spacing:.09em;font-weight:700}
+
+.edge-bench{min-height:82svh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(22rem,.9fr);background:#f8f6ef;color:var(--edge-ink)}
+.edge-bench__devices{position:relative;min-height:46rem;overflow:hidden;background:linear-gradient(135deg,#ddd8cc,#faf8f1)}
+.edge-bench__devices::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 4.9rem,rgba(16,19,17,.1) 4.9rem 5rem),repeating-linear-gradient(90deg,transparent 0 4.9rem,rgba(16,19,17,.1) 4.9rem 5rem)}
+.edge-bench__computer{position:absolute;z-index:2;width:min(78%,760px);left:5%;top:6%;mix-blend-mode:multiply;transform:rotate(-7deg);filter:contrast(1.04)}
+.edge-bench__sensor{position:absolute;z-index:3;width:min(42%,360px);right:7%;bottom:6%;mix-blend-mode:multiply;transform:rotate(8deg);filter:drop-shadow(0 1.5rem 1.4rem rgba(16,19,17,.2))}
+.edge-bench__tag{position:absolute;z-index:4;left:2rem;bottom:2rem;padding:.7rem .85rem;background:var(--edge-orange);font:700 .64rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em}
+.edge-bench__copy{padding:clamp(4rem,7vw,7rem) clamp(2rem,5vw,6rem);display:flex;flex-direction:column;justify-content:space-between;background:var(--edge-ink);color:#fff}
+.edge-bench__copy>span{color:var(--edge-lime)}
+.edge-bench__copy h2{margin:2rem 0 1.5rem;max-width:11ch;font-size:clamp(2.4rem,3.9vw,4.5rem);line-height:.98;letter-spacing:-.055em;font-weight:400}
+.edge-bench__copy p{max-width:31rem;color:rgba(255,255,255,.68);font-size:1.08rem;line-height:1.65}
+.edge-bench__facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.25);margin-top:3rem}
+.edge-bench__facts span{padding:1.2rem;background:var(--edge-ink);font:600 .66rem/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase;letter-spacing:.1em}
+
+.edge-capabilities{padding:clamp(6rem,10vw,10rem) max(7vw,2rem);background:#fff;color:var(--edge-ink)}
+.edge-capabilities__head{display:flex;justify-content:space-between;align-items:end;gap:3rem;margin-bottom:4rem}
+.edge-capabilities__head span{color:#666961}
+.edge-capabilities__head h2{margin:0;max-width:15ch;font-size:clamp(2.3rem,3.9vw,4.5rem);line-height:.99;letter-spacing:-.052em;font-weight:400}
+.edge-capabilities__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem}
+.edge-capability{min-height:17rem;padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;background:var(--cap);color:var(--cap-ink,#fff)}
+.edge-capability:nth-child(1){--cap:var(--edge-blue)}
+.edge-capability:nth-child(2){--cap:var(--edge-orange);--cap-ink:var(--edge-ink)}
+.edge-capability:nth-child(3){--cap:var(--edge-teal)}
+.edge-capability:nth-child(4){--cap:var(--edge-lime);--cap-ink:var(--edge-ink)}
+.edge-capability span{font:700 .67rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em}
+.edge-capability h3{margin:0;max-width:8ch;font-size:clamp(1.6rem,2.35vw,2.7rem);line-height:1;letter-spacing:-.044em;font-weight:400}
+
+.edge-close{padding:clamp(6rem,10vw,10rem) max(7vw,2rem) clamp(9rem,14vw,13rem);display:flex;align-items:end;justify-content:space-between;gap:3rem;background:var(--edge-blue);color:#fff}
+.edge-close h2{margin:1.5rem 0 0;max-width:16ch;font-size:clamp(2.4rem,4vw,4.7rem);line-height:.98;letter-spacing:-.054em;font-weight:400}
+.edge-close .button{flex:none;background:var(--edge-lime);color:var(--edge-ink)}
+
+@media(max-width:900px){
+  .edge-thesis,.edge-manual__head{grid-template-columns:1fr;gap:2.5rem}
+  .edge-band{grid-template-columns:4rem 1fr;padding-inline:1rem}
+  .edge-band p{grid-column:2}
+  .edge-band b{grid-column:2;justify-self:start}
+  .edge-bench{grid-template-columns:1fr}
+  .edge-bench__devices{min-height:68svh}
+  .edge-bench__copy{min-height:35rem}
+  .edge-capabilities__grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:720px){
+  body[data-page="iot-ai-solutions"] .hero::before{top:7rem;right:1.25rem}
+  body[data-page="iot-ai-solutions"] .hero::after{background:linear-gradient(180deg,rgba(16,19,17,.04) 22%,rgba(16,19,17,.9) 68%,var(--edge-ink) 100%)}
+  body[data-page="iot-ai-solutions"] .hero-photo img{object-position:58% center}
+  body[data-page="iot-ai-solutions"] .hero-copy{position:absolute;inset:auto 0 0;width:100%;padding:8.5rem 1.25rem 8.2rem}
+  body[data-page="iot-ai-solutions"] .hero-copy h1{font-size:clamp(2.4rem,10.2vw,3.7rem);max-width:12ch}
+  body[data-page="iot-ai-solutions"] .hero-copy .lede{font-size:.95rem;line-height:1.5}
+  .edge-thesis{min-height:0}
+  .edge-close{align-items:flex-start;flex-direction:column}
+}
+
+@media(max-width:520px){
+  .edge-thesis,.edge-manual,.edge-capabilities,.edge-close{padding-inline:1.25rem}
+  .edge-thesis h2{font-size:clamp(2.2rem,10.5vw,3.5rem)}
+  .edge-band{grid-template-columns:2.7rem 1fr;padding-inline:.7rem}
+  .edge-band:hover{transform:translateX(.25rem)}
+  .edge-bench__devices{min-height:58svh}
+  .edge-bench__computer{width:94%;left:-5%}
+  .edge-bench__sensor{width:48%;right:3%}
+  .edge-bench__copy{padding:4rem 1.25rem;min-height:32rem}
+  .edge-capabilities__head{align-items:flex-start;flex-direction:column;margin-bottom:2.5rem}
+  .edge-capability{min-height:12rem;padding:1rem}
+  .edge-capability h3{font-size:1.45rem}
+}
+
+@media(prefers-reduced-motion:reduce){.edge-band{transition:none}}

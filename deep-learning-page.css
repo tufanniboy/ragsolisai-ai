@@ -1,0 +1,88 @@
+:root {
+  --dl-ink: #161616;
+  --dl-paper: #ece9df;
+  --dl-orange: #ff5a32;
+  --dl-ice: #cfe7ed;
+  --dl-lime: #c8f36d;
+}
+
+body[data-page="deep-learning-consulting"] { background: var(--dl-paper); color: var(--dl-ink); }
+body[data-page="deep-learning-consulting"] .hero { min-height: 100svh; grid-template-columns: 47% 53%; background: var(--dl-paper); color: var(--dl-ink); }
+body[data-page="deep-learning-consulting"] .hero-photo { left: 47%; opacity: 1; filter: none; }
+body[data-page="deep-learning-consulting"] .hero-photo::after { background: linear-gradient(90deg,var(--dl-paper) 0%,rgba(236,233,223,.28) 22%,transparent 58%),linear-gradient(0deg,rgba(22,22,22,.22),transparent 42%); }
+body[data-page="deep-learning-consulting"] .hero-copy { grid-column: 1; align-self: center; max-width: none; padding: 8rem clamp(1.5rem,4.8vw,5.8rem) 7rem clamp(1.5rem,7vw,8rem); }
+body[data-page="deep-learning-consulting"] .hero-copy h1 { max-width: 760px; font-size: clamp(3rem,4.7vw,5.4rem); line-height: .94; color: var(--dl-ink); }
+body[data-page="deep-learning-consulting"] .hero-copy h1 em { color: var(--dl-orange); }
+body[data-page="deep-learning-consulting"] .hero-copy .lede { max-width: 600px; color: rgba(22,22,22,.65); }
+body[data-page="deep-learning-consulting"] .hero-copy .button { background: var(--dl-orange); border-color: var(--dl-orange); color: #111; }
+body[data-page="deep-learning-consulting"] .hero-copy .button:hover { color: var(--dl-orange); }
+body[data-page="deep-learning-consulting"] .eyebrow::before { background: var(--dl-orange); }
+body[data-page="deep-learning-consulting"] .hero-index { color: white; }
+
+.dl-thesis { display: grid; grid-template-columns: .35fr 1.65fr; gap: 7vw; align-items: start; padding: clamp(5rem,8vw,8rem) clamp(1.25rem,7vw,8rem); background: var(--dl-ink); color: white; }
+.dl-thesis__label { width: min(100%,250px); padding-top: .75rem; border-top: 2px solid var(--dl-orange); font: 700 .69rem/1.4 ui-monospace,monospace; letter-spacing: .16em; text-transform: uppercase; }
+.dl-thesis h2 { max-width: 1180px; margin: 0; font-size: clamp(2.8rem,5.2vw,6rem); line-height: .96; font-weight: 400; letter-spacing: -.064em; }
+.dl-thesis h2 em { color: var(--dl-orange); font-style: normal; }
+
+.dl-runs { padding: clamp(5rem,8vw,8rem) clamp(1.25rem,7vw,8rem); background: var(--dl-orange); color: var(--dl-ink); }
+.dl-runs__head { display: grid; grid-template-columns: 1.25fr .75fr; gap: 3rem; align-items: end; margin-bottom: 3.5rem; }
+.dl-runs__head h2 { max-width: 900px; margin: 0; font-size: clamp(3rem,5.5vw,6.4rem); line-height: .9; font-weight: 400; letter-spacing: -.07em; }
+.dl-runs__head p { max-width: 420px; margin: 0 0 .4rem auto; }
+.dl-run { display: grid; grid-template-columns: 75px .66fr 1fr auto; gap: 2rem; align-items: center; min-height: 150px; border-top: 1px solid rgba(22,22,22,.55); }
+.dl-run:last-child { border-bottom: 1px solid rgba(22,22,22,.55); }
+.dl-run__num, .dl-run__state { font: 750 .7rem/1 ui-monospace,monospace; letter-spacing: .08em; text-transform: uppercase; }
+.dl-run__state { display: inline-flex; align-items: center; gap: .55rem; white-space: nowrap; }
+.dl-run__state::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--dl-lime); box-shadow: 0 0 0 4px rgba(200,243,109,.24); }
+.dl-run h3 { margin: 0; font-size: clamp(1.65rem,2.5vw,3rem); font-weight: 430; letter-spacing: -.05em; }
+.dl-run p { max-width: 440px; margin: 0; color: rgba(22,22,22,.68); }
+
+.dl-compute { display: grid; grid-template-columns: 1.12fr .88fr; min-height: 78svh; background: var(--dl-paper); }
+.dl-compute__photo { position: relative; min-height: 650px; margin: 0; overflow: hidden; }
+.dl-compute__photo > img { width: 100%; height: 100%; object-fit: cover; }
+.dl-compute__photo figcaption { position: absolute; left: 1.2rem; bottom: 1.2rem; padding: .5rem .7rem; background: var(--dl-paper); font: 700 .62rem/1 ui-monospace,monospace; letter-spacing: .11em; text-transform: uppercase; }
+.dl-compute__copy { position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(4.5rem,7vw,7.5rem) clamp(1.5rem,5vw,6rem); overflow: hidden; }
+.dl-compute__copy h2 { max-width: 660px; margin: auto 0 1.5rem; font-size: clamp(2.8rem,5vw,5.9rem); line-height: .91; font-weight: 400; letter-spacing: -.067em; }
+.dl-compute__copy p { max-width: 520px; color: rgba(22,22,22,.62); }
+.dl-compute__gpu { position: absolute; right: -8%; top: 3%; width: clamp(260px,33vw,540px); filter: drop-shadow(0 26px 25px rgba(0,0,0,.23)); transform: rotate(-7deg); pointer-events: none; }
+
+.dl-capabilities { display: grid; grid-template-columns: repeat(4,1fr); background: var(--dl-ice); color: var(--dl-ink); border-top: 1px solid rgba(22,22,22,.38); border-left: 1px solid rgba(22,22,22,.38); }
+.dl-capability { min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.8rem; border-right: 1px solid rgba(22,22,22,.38); border-bottom: 1px solid rgba(22,22,22,.38); }
+.dl-capability span { font: 750 .7rem/1 ui-monospace,monospace; letter-spacing: .08em; }
+.dl-capability h3 { margin: 0; font-size: clamp(1.65rem,2.6vw,3.15rem); line-height: .94; font-weight: 430; letter-spacing: -.055em; }
+.dl-capability::after { content: ""; width: 28px; height: 4px; background: var(--dl-orange); transition: width .3s ease; }
+.dl-capability:hover::after { width: 100%; }
+
+.dl-close { min-height: 54svh; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: end; padding: clamp(5rem,8vw,8rem) clamp(1.25rem,7vw,8rem) 9rem; background: var(--dl-lime); color: var(--dl-ink); }
+.dl-close code { font: 700 .7rem/1 ui-monospace,monospace; letter-spacing: .15em; }
+.dl-close h2 { max-width: 990px; margin: 1rem 0 0; font-size: clamp(3rem,6vw,7rem); line-height: .9; font-weight: 400; letter-spacing: -.07em; }
+.dl-close .button { background: var(--dl-ink); border-color: var(--dl-ink); color: white; }
+
+@media (max-width: 900px) {
+  body[data-page="deep-learning-consulting"] .hero { grid-template-columns: 1fr; }
+  body[data-page="deep-learning-consulting"] .hero-photo { left: 0; opacity: .44; }
+  body[data-page="deep-learning-consulting"] .hero-photo::after { background: linear-gradient(0deg,var(--dl-paper) 8%,rgba(236,233,223,.88) 62%,rgba(236,233,223,.16)); }
+  body[data-page="deep-learning-consulting"] .hero-copy { grid-column: 1; align-self: end; padding-bottom: 8rem; }
+  .dl-thesis, .dl-compute { grid-template-columns: 1fr; }
+  .dl-thesis { gap: 3rem; }
+  .dl-runs__head { grid-template-columns: 1fr; }
+  .dl-runs__head p { margin-left: 0; }
+  .dl-compute__photo { min-height: 540px; }
+  .dl-compute__copy { min-height: 570px; }
+  .dl-capabilities { grid-template-columns: 1fr 1fr; }
+  .dl-close { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  body[data-page="deep-learning-consulting"] .hero-copy h1 { font-size: clamp(2.7rem,12vw,4.1rem); }
+  .dl-run { grid-template-columns: 38px 1fr; gap: .8rem; padding: 1.4rem 0; }
+  .dl-run p { grid-column: 2; }
+  .dl-run__state { grid-column: 2; }
+  .dl-compute__photo { min-height: 410px; }
+  .dl-compute__copy { min-height: 500px; }
+  .dl-compute__gpu { width: 270px; top: 1rem; opacity: .8; }
+  .dl-capabilities { grid-template-columns: 1fr; }
+  .dl-capability { min-height: 220px; }
+  .dl-close { padding-bottom: 8.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) { .dl-capability::after { transition: none; } }

@@ -1,0 +1,317 @@
+body[data-page="neuralcore"] {
+  --neural-orange: #ff7800;
+  --neural-black: #0a0b0c;
+  --neural-paper: #ece9e1;
+  --neural-line: rgba(236, 233, 225, 0.16);
+  background: var(--neural-black);
+  color: var(--neural-paper);
+}
+
+body[data-page="neuralcore"] .dock-icon--letter {
+  font: 600 0.85rem/1 Arial, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+body[data-page="neuralcore"] .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6, 7, 8, 0.96) 0%, rgba(6, 7, 8, 0.66) 52%, rgba(6, 7, 8, 0.12) 78%);
+  pointer-events: none;
+}
+
+body[data-page="neuralcore"] .hero-copy,
+body[data-page="neuralcore"] .hero-brand,
+body[data-page="neuralcore"] .hero-index,
+body[data-page="neuralcore"] .hero-signature { z-index: 2; }
+
+body[data-page="neuralcore"] .hero h1 {
+  max-width: 920px;
+  font-size: clamp(3.25rem, 6.3vw, 6.6rem);
+  line-height: 0.91;
+  letter-spacing: -0.065em;
+}
+
+body[data-page="neuralcore"] .hero h1 em { color: var(--neural-orange); }
+
+body[data-page="neuralcore"] .hero-signature .signature {
+  width: min(35vw, 520px);
+  aspect-ratio: 4 / 5;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body[data-page="neuralcore"] .hero-signature .signature::before,
+body[data-page="neuralcore"] .hero-signature .signature::after,
+body[data-page="neuralcore"] .hero-signature .signature > span {
+  display: none;
+}
+
+.neural-hero-card {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: #0a0b0c;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.48);
+  transform: rotate(2deg);
+}
+
+.neural-hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(5, 6, 7, 0.82));
+}
+
+.neural-hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 56% center;
+  filter: grayscale(1) contrast(1.08);
+}
+
+.neural-hero-card figcaption {
+  position: absolute;
+  z-index: 1;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.82);
+  font: 500 0.65rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.neural-intro {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: clamp(3rem, 8vw, 9rem);
+  padding: clamp(7rem, 11vw, 12rem) clamp(1.5rem, 7vw, 8rem);
+  background: var(--neural-orange);
+  color: var(--neural-black);
+}
+
+.neural-intro h2 {
+  max-width: 1000px;
+  margin: 0 0 2rem;
+  font-size: clamp(3rem, 6.2vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  font-weight: 400;
+}
+
+.neural-intro p {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  line-height: 1.62;
+}
+
+.neural-workflow {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(520px, 1.1fr);
+  background: var(--neural-black);
+}
+
+.neural-workflow__field {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.neural-workflow__field img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.15) brightness(0.62);
+}
+
+.neural-workflow__field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5,6,7,.05), rgba(5,6,7,.85)),
+    linear-gradient(90deg, transparent 70%, var(--neural-black));
+}
+
+.neural-workflow__field figcaption {
+  position: absolute;
+  z-index: 2;
+  left: clamp(1.5rem, 5vw, 5rem);
+  right: clamp(1.5rem, 5vw, 5rem);
+  bottom: clamp(2rem, 6vw, 6rem);
+}
+
+.neural-workflow__field figcaption span {
+  color: var(--neural-orange);
+  font: 500 0.68rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.neural-workflow__field figcaption strong {
+  display: block;
+  max-width: 520px;
+  margin-top: 1.3rem;
+  font-size: clamp(2rem, 3.6vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 400;
+}
+
+.neural-workflow__steps {
+  position: relative;
+  border-left: 1px solid var(--neural-line);
+}
+
+.neural-workflow__steps::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4.55rem;
+  width: 1px;
+  background: linear-gradient(var(--neural-orange), rgba(255, 120, 0, 0.1));
+}
+
+.neural-step {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 2.2rem;
+  align-content: center;
+  padding: clamp(5rem, 8vw, 9rem) clamp(2rem, 7vw, 8rem) clamp(5rem, 8vw, 9rem) 2.8rem;
+  border-bottom: 1px solid var(--neural-line);
+}
+
+.neural-step__index {
+  position: relative;
+  z-index: 1;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 120, 0, 0.7);
+  border-radius: 50%;
+  background: var(--neural-black);
+  color: var(--neural-orange);
+  font: 600 0.72rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.neural-step__copy { align-self: center; }
+
+.neural-step h3 {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6.8rem);
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  font-weight: 400;
+}
+
+.neural-step p {
+  max-width: 570px;
+  margin: 1.6rem 0;
+  color: rgba(236, 233, 225, 0.68);
+  font-size: clamp(1rem, 1.35vw, 1.3rem);
+  line-height: 1.6;
+}
+
+.neural-step strong {
+  display: inline-block;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--neural-orange);
+  color: var(--neural-orange);
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.neural-position {
+  display: grid;
+  grid-template-columns: 0.55fr 1.05fr 0.4fr;
+  gap: clamp(2rem, 6vw, 7rem);
+  align-items: end;
+  padding: clamp(7rem, 11vw, 12rem) clamp(1.5rem, 7vw, 8rem);
+  background: var(--neural-paper);
+  color: var(--neural-black);
+}
+
+.neural-position blockquote {
+  margin: 0;
+  font-size: clamp(2.5rem, 4.8vw, 5.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.neural-position__record {
+  border: 1px solid rgba(10,11,12,.35);
+  padding: 1.25rem;
+  font: 500 0.68rem/1.8 ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.neural-position__record span { display: block; }
+.neural-position__record span:last-child { color: #c65300; }
+
+.neural-close {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: clamp(5rem, 8vw, 8rem) clamp(1.5rem, 7vw, 8rem);
+  background: var(--neural-orange);
+  color: var(--neural-black);
+}
+
+.neural-close code {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.neural-close h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 400;
+}
+
+.neural-close .button { background: var(--neural-black); color: #fff; }
+
+@media (max-width: 900px) {
+  body[data-page="neuralcore"] .hero-signature .signature { width: 52vw; }
+  .neural-intro { grid-template-columns: 1fr; }
+  .neural-workflow { grid-template-columns: 1fr; }
+  .neural-workflow__field { position: relative; height: 72vh; }
+  .neural-workflow__steps { border-left: 0; }
+  .neural-position { grid-template-columns: 1fr; align-items: start; }
+  .neural-close { grid-template-columns: 1fr; }
+  .neural-close .button { justify-self: start; }
+}
+
+@media (max-width: 560px) {
+  body[data-page="neuralcore"] .hero h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
+  .neural-intro { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .neural-workflow__field { height: 60vh; }
+  .neural-workflow__field figcaption { left: 1.25rem; right: 1.25rem; bottom: 2rem; }
+  .neural-workflow__steps::before { left: 2.98rem; }
+  .neural-step {
+    grid-template-columns: 2.7rem 1fr;
+    gap: 1.1rem;
+    min-height: 68vh;
+    padding: 4.5rem 1.25rem 4.5rem 1.6rem;
+  }
+  .neural-step__index { width: 2.7rem; height: 2.7rem; }
+  .neural-step h3 { font-size: clamp(3.2rem, 16vw, 4.7rem); }
+  .neural-position,
+  .neural-close { padding-left: 1.25rem; padding-right: 1.25rem; }
+}

@@ -1,0 +1,160 @@
+body[data-page="ai-governance-consulting"]{
+  --gov-ink:#171817;
+  --gov-paper:#eeeae0;
+  --gov-white:#f8f6ef;
+  --gov-wine:#7e1f38;
+  --gov-blue:#304d91;
+  --gov-gold:#d6a73a;
+  background:var(--gov-paper);
+  color:var(--gov-ink);
+}
+
+body[data-page="ai-governance-consulting"] .hero{
+  height:100svh;
+  min-height:100svh;
+  max-height:100svh;
+  display:grid;
+  grid-template-columns:minmax(0,48%) minmax(0,52%);
+  background:var(--gov-paper);
+  color:var(--gov-ink);
+  overflow:hidden;
+}
+
+body[data-page="ai-governance-consulting"] .hero::before{
+  content:"CASE FILE  /  GOV-01";
+  position:absolute;
+  z-index:3;
+  top:clamp(7.5rem,16vh,10rem);
+  left:max(7vw,2rem);
+  color:var(--gov-wine);
+  font:600 .67rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;
+  letter-spacing:.16em;
+}
+
+body[data-page="ai-governance-consulting"] .hero::after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:0 52% 0 0;
+  pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent 0 3.9rem,rgba(23,24,23,.065) 3.9rem 4rem);
+}
+
+body[data-page="ai-governance-consulting"] .hero-photo{
+  inset:0 0 0 48%;
+  width:auto;
+  height:100%;
+}
+body[data-page="ai-governance-consulting"] .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--gov-paper) 0,rgba(238,234,224,.42) 11%,transparent 30%),linear-gradient(0deg,rgba(23,24,23,.16),transparent 36%)}
+body[data-page="ai-governance-consulting"] .hero-photo img{object-position:center;filter:saturate(.72) contrast(1.02)}
+
+body[data-page="ai-governance-consulting"] .hero-copy{
+  position:relative;
+  z-index:4;
+  width:min(95%,760px);
+  align-self:end;
+  padding:clamp(8.5rem,18vh,12rem) 3vw clamp(7.5rem,12vh,9rem) max(7vw,2rem);
+}
+body[data-page="ai-governance-consulting"] .hero-copy .eyebrow{color:var(--gov-wine)}
+body[data-page="ai-governance-consulting"] .hero-copy h1{max-width:12ch;color:var(--gov-ink);font-size:clamp(2.65rem,4.35vw,5rem);line-height:.95;letter-spacing:-.058em}
+body[data-page="ai-governance-consulting"] .hero-copy h1 em{display:block;color:var(--gov-wine);font-style:normal;font-weight:inherit}
+body[data-page="ai-governance-consulting"] .hero-copy .lede{max-width:36rem;color:rgba(23,24,23,.68)}
+body[data-page="ai-governance-consulting"] .hero .button{background:var(--gov-wine);color:#fff}
+body[data-page="ai-governance-consulting"] .hero .text-link{color:var(--gov-ink);border-color:rgba(23,24,23,.45)}
+body[data-page="ai-governance-consulting"] .hero-index{z-index:4;color:rgba(23,24,23,.56)}
+
+.gov-thesis{
+  min-height:62svh;
+  padding:clamp(6rem,10vw,10rem) max(7vw,2rem);
+  display:grid;
+  grid-template-columns:minmax(11rem,.8fr) minmax(0,3fr);
+  gap:6vw;
+  background:var(--gov-wine);
+  color:#fff;
+}
+.gov-kicker,.gov-ledger__head span,.gov-review__copy>span,.gov-controls__head span{font:600 .7rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase;letter-spacing:.15em}
+.gov-thesis h2{margin:0;max-width:18ch;font-size:clamp(2.3rem,4.4vw,5rem);line-height:.98;letter-spacing:-.055em;font-weight:400}
+.gov-thesis h2 em{font-style:normal;color:var(--gov-gold)}
+
+.gov-ledger{padding:clamp(6rem,10vw,10rem) max(7vw,2rem);background:var(--gov-paper);color:var(--gov-ink)}
+.gov-ledger__head{display:grid;grid-template-columns:1fr 2.2fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.gov-ledger__head span{color:#6d6a62}
+.gov-ledger__head h2{margin:0;max-width:16ch;font-size:clamp(2.3rem,3.9vw,4.5rem);line-height:.99;letter-spacing:-.052em;font-weight:400}
+.gov-ledger__table{border-top:2px solid var(--gov-ink)}
+.gov-record{min-height:12rem;display:grid;grid-template-columns:6rem minmax(12rem,.9fr) minmax(17rem,1.35fr) 12rem;gap:2rem;align-items:center;padding:2.4rem 0;border-bottom:1px solid rgba(23,24,23,.3);position:relative}
+.gov-record::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--gov-white);transition:width .35s ease;z-index:0}
+.gov-record:hover::before{width:100%}
+.gov-record>*{position:relative;z-index:1}
+.gov-record__num{font:600 .85rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--gov-wine)}
+.gov-record h3{margin:0;font-size:clamp(1.7rem,2.5vw,2.9rem);line-height:1;letter-spacing:-.045em;font-weight:400}
+.gov-record p{margin:0;max-width:34rem;color:rgba(23,24,23,.62);font-size:clamp(.98rem,1.2vw,1.12rem);line-height:1.55}
+.gov-record b{justify-self:end;padding:.65rem .8rem;border:1px solid var(--gov-wine);color:var(--gov-wine);font:600 .63rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase;letter-spacing:.08em}
+
+.gov-review{min-height:80svh;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(22rem,.8fr);background:var(--gov-blue);color:#fff}
+.gov-review__photo{margin:0;min-height:43rem;position:relative;overflow:hidden}
+.gov-review__photo img{width:100%;height:100%;object-fit:cover;object-position:center 66%;display:block;filter:saturate(.7) contrast(1.02)}
+.gov-review__photo::after{content:"REVIEW SESSION / EVIDENCE IN CONTEXT";position:absolute;left:2rem;bottom:2rem;padding:.65rem .8rem;background:var(--gov-paper);color:var(--gov-ink);font:600 .64rem/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.11em}
+.gov-review__copy{padding:clamp(4rem,7vw,7rem) clamp(2rem,5vw,6rem);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.gov-review__copy>span{color:#d9c177}
+.gov-review__copy h2{margin:2rem 0 1.5rem;max-width:11ch;font-size:clamp(2.4rem,3.9vw,4.5rem);line-height:.98;letter-spacing:-.055em;font-weight:400}
+.gov-review__copy p{max-width:31rem;color:rgba(255,255,255,.68);font-size:1.08rem;line-height:1.65}
+.gov-review__stamp{width:min(52%,190px);margin:3rem 12% -1rem auto;transform:rotate(-10deg);filter:drop-shadow(0 1.5rem 1.5rem rgba(0,0,0,.35));image-rendering:auto;transition:transform .35s ease}
+.gov-review:hover .gov-review__stamp{transform:rotate(3deg) scale(1.05)}
+
+.gov-controls{padding:clamp(6rem,10vw,10rem) max(7vw,2rem);background:#fff;color:var(--gov-ink)}
+.gov-controls__head{display:flex;justify-content:space-between;align-items:end;gap:3rem;margin-bottom:4rem}
+.gov-controls__head span{color:#6c6a64}
+.gov-controls__head h2{margin:0;max-width:15ch;font-size:clamp(2.3rem,3.9vw,4.5rem);line-height:.99;letter-spacing:-.052em;font-weight:400}
+.gov-controls__grid{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--gov-ink)}
+.gov-control{min-height:17rem;padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--gov-ink);transition:background .25s ease,color .25s ease}
+.gov-control:last-child{border-right:0}
+.gov-control:hover{background:var(--gov-wine);color:#fff}
+.gov-control span{font:600 .67rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em}
+.gov-control h3{margin:0;max-width:8ch;font-size:clamp(1.6rem,2.4vw,2.7rem);line-height:1;letter-spacing:-.044em;font-weight:400}
+
+.gov-close{padding:clamp(6rem,10vw,10rem) max(7vw,2rem) clamp(9rem,14vw,13rem);display:flex;align-items:end;justify-content:space-between;gap:3rem;background:var(--gov-gold);color:var(--gov-ink)}
+.gov-close h2{margin:1.5rem 0 0;max-width:16ch;font-size:clamp(2.4rem,4vw,4.7rem);line-height:.98;letter-spacing:-.054em;font-weight:400}
+.gov-close .button{flex:none;background:var(--gov-ink);color:#fff}
+
+@media (max-width:900px){
+  .gov-thesis,.gov-ledger__head{grid-template-columns:1fr;gap:2.5rem}
+  .gov-record{grid-template-columns:4rem 1fr;padding-inline:1rem}
+  .gov-record p{grid-column:2}
+  .gov-record b{grid-column:2;justify-self:start}
+  .gov-review{grid-template-columns:1fr}
+  .gov-review__photo{min-height:68svh}
+  .gov-review__copy{min-height:36rem}
+  .gov-controls__grid{grid-template-columns:repeat(2,1fr)}
+  .gov-control:nth-child(2){border-right:0}
+  .gov-control:nth-child(-n+2){border-bottom:1px solid var(--gov-ink)}
+}
+
+@media (max-width:720px){
+  body[data-page="ai-governance-consulting"] .hero{display:block;background:var(--gov-ink);color:#fff}
+  body[data-page="ai-governance-consulting"] .hero::before{top:7.2rem;left:1.25rem;color:#e7c56c}
+  body[data-page="ai-governance-consulting"] .hero::after{inset:0;background:linear-gradient(180deg,rgba(23,24,23,.02) 20%,rgba(23,24,23,.9) 68%,var(--gov-ink) 100%)}
+  body[data-page="ai-governance-consulting"] .hero-photo{inset:0;width:100%;height:100%}
+  body[data-page="ai-governance-consulting"] .hero-photo::after{background:linear-gradient(180deg,transparent 22%,rgba(23,24,23,.9) 70%,var(--gov-ink))}
+  body[data-page="ai-governance-consulting"] .hero-copy{position:absolute;inset:auto 0 0;width:100%;padding:8.5rem 1.25rem 8.2rem}
+  body[data-page="ai-governance-consulting"] .hero-copy h1{color:#fff;font-size:clamp(2.45rem,10.5vw,3.8rem);max-width:12ch}
+  body[data-page="ai-governance-consulting"] .hero-copy h1 em{color:#e7c56c}
+  body[data-page="ai-governance-consulting"] .hero-copy .lede{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.5}
+  body[data-page="ai-governance-consulting"] .hero .text-link{color:#fff;border-color:rgba(255,255,255,.45)}
+  body[data-page="ai-governance-consulting"] .hero-index{color:rgba(255,255,255,.58)}
+  .gov-thesis{min-height:0}
+  .gov-close{align-items:flex-start;flex-direction:column}
+}
+
+@media (max-width:520px){
+  .gov-thesis,.gov-ledger,.gov-controls,.gov-close{padding-inline:1.25rem}
+  .gov-thesis h2{font-size:clamp(2.2rem,10.5vw,3.5rem)}
+  .gov-record{grid-template-columns:2.7rem 1fr;padding-inline:.25rem}
+  .gov-review__photo{min-height:58svh}
+  .gov-review__copy{padding:4rem 1.25rem;min-height:32rem}
+  .gov-review__stamp{width:9rem;margin-right:15%}
+  .gov-controls__head{align-items:flex-start;flex-direction:column;margin-bottom:2.5rem}
+  .gov-control{min-height:12rem;padding:1rem}
+  .gov-control h3{font-size:1.45rem}
+}
+
+@media (prefers-reduced-motion:reduce){.gov-record::before,.gov-review__stamp{transition:none}}
